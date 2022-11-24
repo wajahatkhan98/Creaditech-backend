@@ -3,8 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import connectDB from './config/db.js';
-import FormRouter from './Routes/FormRoutes.js';
-
+import FormRouter from './Routes/FormRoutes';
 dotenv.config();
 await connectDB();
 const app = express();
