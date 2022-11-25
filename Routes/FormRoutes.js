@@ -50,5 +50,5 @@ FormRouter.route('/form-data').post(
 	upload.fields([{ name: 'DropYourCV' }]),
 	FormDatas
 );
-FormRouter.get('/sendEmail', sendMail);
+FormRouter.post('/sendEmail', sendMail);
 export default FormRouter;

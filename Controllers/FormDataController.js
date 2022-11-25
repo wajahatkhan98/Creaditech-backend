@@ -24,10 +24,10 @@ const FormDatas = asyncHandler(async (req, res) => {
 		.json({ status: true, massage: 'Files has been successfully uploaded' });
 });
 const sendMail = asyncHandler(async (req, res, next) => {
-	console.log('hello');
-	const data = await sendEmail(req);
+	console.log('hello',req.body);
+	const data = await sendEmail(req.body);
 	console.log(data);
-	res.status(200).json('send');
+	res.status(200).send({message:"sent"});
 	return;
 });
 export { FormDatas, sendMail };
