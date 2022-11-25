@@ -7,6 +7,10 @@ const FormDatas = asyncHandler(async (req, res) => {
 	const { DropYourCV } = req.files;
 
 	console.log('first');
+	console.log('first');
+	console.log('first');
+	console.log('first');
+	console.log('first');
 
 	console.log(req.files);
 
