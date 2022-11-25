@@ -8,7 +8,7 @@ const formData = new Schema(
 			type: String,
 		},
 
-		YourName: {
+		Name: {
 			type: String,
 			required: true,
 		},
@@ -31,12 +31,12 @@ const formData = new Schema(
 
 		YourRole: {
 			type: String,
-			required: true,
+			// required: true,
 		},
 
 		DropYourCV: {
 			type: String,
-			required: true,
+			// required: true,
 		},
 	},
 	{

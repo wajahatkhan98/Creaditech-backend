@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 
 import multer from 'multer';
 
-import { FormData } from '../Controllers/FormDataController';
+import { FormDatas, sendMail } from '../Controllers/FormDataController';
 
 import { appendFile } from 'fs';
 
@@ -14,12 +14,6 @@ const FormRouter = express.Router();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const UPLOAD_PATH = join(__dirname, '../', './upload');
-
-FormRouter.use(
-	express.urlencoded({
-		extended: false,
-	})
-);
 
 const storage = multer.diskStorage({
 	destination(req, file, cb) {
@@ -54,7 +48,7 @@ const upload = multer({
 
 FormRouter.route('/form-data').post(
 	upload.fields([{ name: 'DropYourCV' }]),
-	FormData
+	FormDatas
 );
-
+FormRouter.get('/sendEmail', sendMail);
 export default FormRouter;
