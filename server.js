@@ -3,8 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 // import connectDB from './config/db.js';
-import formRouter from './Routes/formRoutes';
-import FormRouter from './Routes/formRoutes';
+import FormRouter from './routes/FormRoutes.js';
 
 dotenv.config();
 // await connectDB();
